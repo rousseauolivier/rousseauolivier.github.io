@@ -11,8 +11,36 @@
 </head>
 <body>
 
-<!doctype html>
-<meta charset="utf-8">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Olivier Rousseau</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulaire.html">Formulaire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="jeu.html">Jeu</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher dans le magasin</button>
+        </form>
+    </div>
+</nav>
+
 <script src="js/pixi.min.js"></script>
 <script>
 
@@ -26,8 +54,8 @@
 
     //Create a Pixi Application
     let app = new Application({
-            width: 520,
-            height: 520,
+            width: 256,
+            height: 256,
             antialiasing: true,
             transparent: false,
             resolution: 1
@@ -42,23 +70,16 @@
         .load(setup);
 
     //Define any variables that are used in more than one function
-    var maxim, state;
-    var ennemy = ["ennemy1", "ennemy2", "ennemy3"];
+    var cat, state;
 
     function setup() {
 
         //Create the `cat` sprite
-        maxim = new Sprite(resources["medias/maxim.png"].texture);
-        maxim.y = 96;
-        maxim.vx = 0;
-        maxim.vy = 0;
-
-        ennemy[0] = new Sprite(resources)
-
-
-
-
-        app.stage.addChild(maxim);
+        cat = new Sprite(resources["medias/maxim.png"].texture);
+        cat.y = 96;
+        cat.vx = 0;
+        cat.vy = 0;
+        app.stage.addChild(cat);
 
         //Capture the keyboard arrow keys
         let left = keyboard(37),
@@ -69,8 +90,8 @@
         //Left arrow key `press` method
         left.press = () => {
             //Change the cat's velocity when the key is pressed
-            maxim.vx = -5;
-            maxim.vy = 0;
+            cat.vx = -5;
+            cat.vy = 0;
         };
 
         //Left arrow key `release` method
@@ -78,41 +99,41 @@
             //If the left arrow has been released, and the right arrow isn't down,
             //and the cat isn't moving vertically:
             //Stop the cat
-            if (!right.isDown && maxim.vy === 0) {
-                maxim.vx = 0;
+            if (!right.isDown && cat.vy === 0) {
+                cat.vx = 0;
             }
         };
 
         //Up
         up.press = () => {
-            maxim.vy = -5;
-            maxim.vx = 0;
+            cat.vy = -5;
+            cat.vx = 0;
         };
         up.release = () => {
-            if (!down.isDown && maxim.vx === 0) {
-                maxim.vy = 0;
+            if (!down.isDown && cat.vx === 0) {
+                cat.vy = 0;
             }
         };
 
         //Right
         right.press = () => {
-            maxim.vx = 5;
-            maxim.vy = 0;
+            cat.vx = 5;
+            cat.vy = 0;
         };
         right.release = () => {
-            if (!left.isDown && maxim.vy === 0) {
-                maxim.vx = 0;
+            if (!left.isDown && cat.vy === 0) {
+                cat.vx = 0;
             }
         };
 
         //Down
         down.press = () => {
-            maxim.vy = 5;
-            maxim.vx = 0;
+            cat.vy = 5;
+            cat.vx = 0;
         };
         down.release = () => {
-            if (!up.isDown && maxim.vx === 0) {
-                maxim.vy = 0;
+            if (!up.isDown && cat.vx === 0) {
+                cat.vy = 0;
             }
         };
 
@@ -127,14 +148,13 @@
 
         //Update the current game state:
         state(delta);
-
     }
 
     function play(delta) {
 
         //Use the cat's velocity to make it move
-        maxim.x += maxim.vx;
-        maxim.y += maxim.vy
+        cat.x += cat.vx;
+        cat.y += cat.vy
     }
 
     //The `keyboard` helper function
@@ -174,8 +194,20 @@
         );
         return key;
     }
+
 </script>
-
-
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-12 text-center">
+                <p>Nous ne sommes aucunement responsable de tout arnaque.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script> <!-- METTRE LE .JS A LA FIN DU BODY -->
+<script src="monscript.js"></script> <!-- ouvre le javascript-->
 </body>
 </html>
