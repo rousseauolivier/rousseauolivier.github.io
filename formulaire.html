@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Olivier Rousseau</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulaire.html">Formulaire</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher dans le magasin</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Quelle est votre sexe?</label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>Male</option>
+                    <option>Femelle</option>
+                    <option>Transgenre</option>
+                    <option>Hélicoptère Apache V.2.3</option>
+                    <option>Escargot</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="inputDepart">Quelle est votre date de naissance:</label>
+            <input type="date" class="form-control" id="inputDepart">
+        </div>
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="inputLeave">Quelle est votre date de décès:</label>
+            <input type="date" class="form-control" id="inputLeave">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="adulte">Combien de soeurs avez vous?</label>
+            <input type="number" class="form-control" id="adulte">
+        </div>
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="enfant">Combien de frères avez-vous?</label>
+            <input type="number" class="form-control" id="enfant">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-12">
+            <label for="nas">Quelle est votre numéro d'assurance social?</label>
+            <input type="number" class="form-control" id="nas">
+        </div>
+    </div>
+
+    <div class="row no-gutters text-center">
+        <div class="col-lg-12">
+            <img class="img-fluid" src="medias/formulairecover.jpg">
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script> <!-- METTRE LE .JS A LA FIN DU BODY -->
+<script src="monscript.js"></script> <!-- ouvre le javascript-->
+</body>
+</html>

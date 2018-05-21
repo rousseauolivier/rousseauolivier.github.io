@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rousseau</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- LE STYLE.CSS EST EN DESSOUS DU BOOTSTRAP POUR L'OVERWRITE -->
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Olivier Rousseau</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulaire.html">Formulaire</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher dans le magasin</button>
+        </form>
+    </div>
+</nav>
+
+
+<!-- SITE EN DESSOUS -->
+<div class="container-fluid">
+    <div class="row no-gutters"> <!-- Photo de couverture -->
+        <div class="col-12">
+            <img src="medias/mainpage.jpg" class="img-fluid">
+            <div class="centered text-center">
+                <h1>OLIVIER ROUSSEAU MARCHANDISE</h1>
+                <a href="#newstuff">
+                    <button class="btn btn-dark">Voir la marchandise</button>
+                </a>
+            </div>
+        </div>
+    </div> <!-- Fin photo couverture -->
+
+    <div class="row no-gutters">
+        <div class="col-12 divider text-center">
+            <a name="newstuff"></a>
+            <h2>Nouveautés du mois</h2>
+        </div>
+    </div>
+
+    <!-- Nouveautés -->
+    <div class="row no-gutters text-center">
+        <!-- Rangée -->
+        <div class="col-lg-4 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <!-- Rangée -->
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <!-- Rangée -->
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+        <div class="col-lg-4 col-sm-6 zoom">
+            <img class="img-fluid" src="medias/shirt1.png">
+        </div>
+    </div>
+    <!-- CONTACT -->
+    <div class="row no-gutters">
+        <div class="col-12 divider text-center">
+            <h1>Contact</h1>
+            <h3>Emplacement du magasin</h3>
+            <script>
+                function initMap() {
+                    // Styles a map in night mode.
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: 40.674, lng: -73.945},
+                        zoom: 12,
+                        styles: [
+                            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                            {
+                                featureType: 'administrative.locality',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#d59563'}]
+                            },
+                            {
+                                featureType: 'poi',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#d59563'}]
+                            },
+                            {
+                                featureType: 'poi.park',
+                                elementType: 'geometry',
+                                stylers: [{color: '#263c3f'}]
+                            },
+                            {
+                                featureType: 'poi.park',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#6b9a76'}]
+                            },
+                            {
+                                featureType: 'road',
+                                elementType: 'geometry',
+                                stylers: [{color: '#38414e'}]
+                            },
+                            {
+                                featureType: 'road',
+                                elementType: 'geometry.stroke',
+                                stylers: [{color: '#212a37'}]
+                            },
+                            {
+                                featureType: 'road',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#9ca5b3'}]
+                            },
+                            {
+                                featureType: 'road.highway',
+                                elementType: 'geometry',
+                                stylers: [{color: '#746855'}]
+                            },
+                            {
+                                featureType: 'road.highway',
+                                elementType: 'geometry.stroke',
+                                stylers: [{color: '#1f2835'}]
+                            },
+                            {
+                                featureType: 'road.highway',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#f3d19c'}]
+                            },
+                            {
+                                featureType: 'transit',
+                                elementType: 'geometry',
+                                stylers: [{color: '#2f3948'}]
+                            },
+                            {
+                                featureType: 'transit.station',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#d59563'}]
+                            },
+                            {
+                                featureType: 'water',
+                                elementType: 'geometry',
+                                stylers: [{color: '#17263c'}]
+                            },
+                            {
+                                featureType: 'water',
+                                elementType: 'labels.text.fill',
+                                stylers: [{color: '#515c6d'}]
+                            },
+                            {
+                                featureType: 'water',
+                                elementType: 'labels.text.stroke',
+                                stylers: [{color: '#17263c'}]
+                            }
+                        ]
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                    async defer></script>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57755.11705686818!2d55.260619940184355!3d25.213512416566868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4281e7878fd9%3A0x6e934c3edc4f07da!2sBurj+Khalifa+-+1+Sheikh+Mohammed+bin+Rashid+Blvd+-+Dubai+-+United+Arab+Emirates!5e0!3m2!1sen!2sca!4v1525355245323"
+                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row no-gutters text-center fondnoir">
+            <div class="col-12">
+                <h3>Courriel</h3>
+                <p><a href="mailto:rousseau.olivier@carrefour.cegepvicto.ca?Subject=ProjetSiteWeb" target="_top">rousseau.olivier@carrefour.cegepvicto.ca</a>
+                </p>
+            </div>
+            <div class="col-12">
+                <h3>Téléphone</h3>
+            </div>
+        <div class="col-12">
+            <p><a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center">
+                    <p>Nous ne sommes aucunement responsable de tout arnaque.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>   <!-- FIN DU CONTAINER FLUID-->
+/;
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script> <!-- METTRE LE .JS A LA FIN DU BODY -->
+<script src="monscript.js"></script> <!-- ouvre le javascript-->
+</body>
+</html>
